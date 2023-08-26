@@ -1,7 +1,6 @@
 name: Test Project
 on: [push]
 jobs:
-  install-dependencies:
   run-lint:
     runs-on: ubuntu-latest
     steps:
