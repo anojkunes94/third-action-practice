@@ -4,6 +4,8 @@ jobs:
   run-lint:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
       - name: Common Steps
         uses: ./.github/actions/my-common-steps
       - name: Run Lint
@@ -12,6 +14,8 @@ jobs:
     needs: [run-lint]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
       - name: Common Steps
         uses: ./.github/actions/my-common-steps
       - name: Run test
@@ -20,6 +24,8 @@ jobs:
     needs: [run-test]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
       - name: Common Steps
         uses: ./.github/actions/my-common-steps
       - name: Build Project
